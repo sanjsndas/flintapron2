@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flint Apron Pantry | Heirloom Recipes & Modern Kitchen Wisdom</title>
+  <meta name="description" content="Flint Apron Pantry is an independent recipe journal with slow-cooked stories, heirloom techniques, and practical kitchen wisdom. Discover sourdough, braises, preserves, and seasonal cooking.">
+  <link rel="canonical" href="https://flintapronpantry.com/">
+  <meta property="og:title" content="Flint Apron Pantry | Heirloom Recipes & Modern Kitchen Wisdom">
+  <meta property="og:description" content="Slow-cooked stories, heirloom techniques, and practical kitchen wisdom. A recipe journal for cooks who read.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flintapronpantry.com/">
+  <meta property="og:image" content="https://flintapronpantry.com/images/og-flint-apron.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flint Apron Pantry | Heirloom Recipes & Modern Kitchen Wisdom">
+  <meta name="twitter:description" content="Slow-cooked stories, heirloom techniques, and practical kitchen wisdom.">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #fcf9f4;
+      --ink: #2c2a26;
+      --ink-soft: #4f4b44;
+      --muted: #7a746b;
+      --border: #e2dbd1;
+      --accent: #9d5c3c;
+      --accent-hover: #7e452a;
+      --card-bg: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; color: var(--ink-soft); }
+
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      margin-top: 2.5rem;
+    }
+
+    .article-body h3 {
+      margin-top: 2rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      background-color: rgba(252, 249, 244, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ---------- SEARCH BAR ---------- */
+    .search-section {
+      background: #f5f0e9;
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .search-inner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      background: var(--card-bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .category-filter {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      color: var(--ink-soft);
+      transition: all 0.15s;
+      font-family: var(--font-sans);
+    }
+
+    .category-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .category-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ---------- MAIN GRID ---------- */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* ---------- FEATURED ARTICLE ---------- */
+    .featured-article {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .featured-article img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      padding: 1.75rem 2rem 2rem;
+    }
+
+    .featured-content .category-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-content h2 {
+      font-size: 1.9rem;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .featured-content h2 a {
+      color: var(--ink);
+    }
+
+    .featured-content h2 a:hover {
+      color: var(--accent);
+    }
+
+    .featured-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* ---------- ARTICLE CARDS ---------- */
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .article-card {
+      display: grid;
+      grid-template-columns: 1fr 2.2fr;
+      gap: 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s;
+    }
+
+    .article-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .article-card-img {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+    }
+
+    .article-card-body {
+      padding: 1.5rem 1.5rem 1.5rem 0;
+    }
+
+    .article-card-body .category-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .article-card-body h3 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+    }
+
+    .article-card-body h3 a {
+      color: var(--ink);
+    }
+
+    .article-card-body h3 a:hover {
+      color: var(--accent);
+    }
+
+    .article-card-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .article-card-body p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ---------- SIDEBAR ---------- */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-widget {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-widget h3 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-widget ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .sidebar-widget li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .sidebar-widget li a {
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    .sidebar-widget li a:hover {
+      color: var(--accent);
+    }
+
+    .sidebar-widget .meta-small {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    .about-author {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .author-info {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--ink);
+      font-family: var(--font-serif);
+    }
+
+    /* ---------- NEWSLETTER ---------- */
+    .newsletter-section {
+      background: #f0ebe3;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0;
+      margin: 2rem 0;
+    }
+
+    .newsletter-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-text h2 {
+      font-size: 1.5rem;
+      margin: 0 0 0.25rem;
+    }
+
+    .newsletter-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      min-width: 220px;
+      background: var(--card-bg);
+      outline: none;
+      font-family: var(--font-sans);
+    }
+
+    .newsletter-form input:focus {
+      border-color: var(--accent);
+    }
+
+    .newsletter-form button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.7rem 1.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: background 0.15s;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--accent-hover);
+    }
+
+    /* ---------- FAQ SECTION ---------- */
+    .faq-section {
+      padding: 2rem 0 3rem;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item h4 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: #2c2a26;
+      color: #d9d2c8;
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span {
+      color: #d4a373;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: #a89f94;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #b8afa4;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #d4a373;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid #3f3b35;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8176;
+    }
+
+    /* ---------- ARTICLE READING LAYOUT (for article pages) ---------- */
+    .article-page {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .article-page .article-header {
+      margin-bottom: 2rem;
+    }
+
+    .article-page .article-header h1 {
+      font-size: 2.4rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-page .article-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-page .article-body {
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .article-page .article-body img {
+      margin: 2rem 0;
+      border-radius: var(--radius);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .article-card {
+        grid-template-columns: 1fr;
+      }
+
+      .article-card-img {
+        min-height: 200px;
+        max-height: 220px;
+      }
+
+      .article-card-body {
+        padding: 1.25rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 1rem 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .search-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .category-filter {
+        justify-content: flex-start;
+      }
+
+      .featured-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .featured-article img {
+        height: 220px;
+      }
+
+      .newsletter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .newsletter-form input {
+        min-width: 100%;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .article-page .article-header h1 {
+        font-size: 1.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      .featured-content { padding: 1.25rem; }
+      .featured-content h2 { font-size: 1.3rem; }
+      .article-card-body h3 { font-size: 1.1rem; }
+    }
+
+    /* ---------- UTILITY ---------- */
+    .hidden {
+      display: none !important;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Flint Apron Pantry home">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        Flint Apron <span>Pantry</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== SEARCH & FILTER ========== -->
+  <section class="search-section" aria-label="Search and filter articles">
+    <div class="search-inner">
+      <input type="search" class="search-input" id="searchInput" placeholder="Search recipes, techniques, stories…" aria-label="Search articles">
+      <div class="category-filter" id="categoryFilter">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="baking">Baking</button>
+        <button class="category-btn" data-category="braising">Braising</button>
+        <button class="category-btn" data-category="preserving">Preserving</button>
+        <button class="category-btn" data-category="technique">Technique</button>
+        <button class="category-btn" data-category="seasonal">Seasonal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="container" role="main">
+    <div class="main-grid">
+      <!-- LEFT COLUMN: ARTICLES -->
+      <div class="articles-column" id="articlesColumn">
+        <!-- FEATURED ARTICLE -->
+        <article class="featured-article" data-category="baking" data-title="the lost art of sourdough hydration">
+          <img src="https://images.unsplash.com/photo-1585478259715-876acc5be8eb?w=800&q=80" alt="Rustic sourdough loaves cooling on a wooden rack with a linen cloth" loading="lazy">
+          <div class="featured-content">
+            <span class="category-tag">Baking</span>
+            <h2><a href="#">The Lost Art of Sourdough Hydration: Going Beyond 75%</a></h2>
+            <div class="featured-meta">
+              <span>By Eliza Hartwell</span>
+              <span>March 12, 2025</span>
+              <span>14 min read</span>
+            </div>
+            <p>Most modern sourdough advice stops at 75% hydration. But older European baking traditions pushed dough much further — and the results were extraordinary. We explore the science, the feel, and the patience required to work with high-hydration doughs, plus a master formula for a 85% country loaf that bakes with a lacquer-thin crust and an open, custardy crumb.</p>
+          </div>
+        </article>
+
+        <!-- ARTICLE LIST -->
+        <div class="article-list" id="articleList">
+          <!-- Article 1 -->
+          <article class="article-card" data-category="braising" data-title="red wine braised short ribs">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" alt="Braised short ribs in a dark rich sauce with herbs" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Braising</span>
+              <h3><a href="#">Red Wine & Juniper Braised Short Ribs: A Sunday Ritual</a></h3>
+              <div class="article-card-meta">
+                <span>March 8, 2025</span>
+                <span>11 min read</span>
+              </div>
+              <p>There are braises that feed you, and braises that change you. This short rib recipe, built on a base of caramelized onions, tomato paste, and a bottle of unassuming Côtes du Rhône, falls into the second category. We walk through the searing, the deglazing, and the slow four-hour simmer that turns collagen into silk.</p>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card" data-category="preserving" data-title="putting up tomatoes">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Jars of preserved tomatoes on a wooden shelf" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Preserving</span>
+              <h3><a href="#">Putting Up Tomatoes: The Water-Bath Method That Never Fails</a></h3>
+              <div class="article-card-meta">
+                <span>March 5, 2025</span>
+                <span>9 min read</span>
+              </div>
+              <p>Late summer tomatoes deserve more than a quick sauce. We share the old-school water-bath canning method our grandmothers used — no pressure canner required — plus a few modern safety tweaks. Includes a recipe for basil-garlic crushed tomatoes that taste like sunshine in January.</p>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card" data-category="technique" data-title="the maillard reaction">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80" alt="Steak searing in a cast iron skillet with butter and herbs" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Technique</span>
+              <h3><a href="#">The Maillard Reaction: Why Your Sear Isn't Working</a></h3>
+              <div class="article-card-meta">
+                <span>March 1, 2025</span>
+                <span>8 min read</span>
+              </div>
+              <p>You've heard the term. You've watched the videos. But if your steaks, mushrooms, or roasted vegetables aren't developing that deep mahogany crust, you're missing one of three critical factors. We break down the science of browning and give you a practical checklist for better searing on any stove.</p>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article-card" data-category="seasonal" data-title="spring ramp pesto">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Fresh ramps and pesto ingredients on a rustic table" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Seasonal</span>
+              <h3><a href="#">Spring Ramps & Toasted Walnut Pesto: A Four-Week Window</a></h3>
+              <div class="article-card-meta">
+                <span>February 26, 2025</span>
+                <span>7 min read</span>
+              </div>
+              <p>Ramps appear for just a few weeks each spring. This pesto — made with wild ramps, toasted walnuts, aged pecorino, and a squeeze of lemon — captures their garlicky, oniony essence. We also cover how to freeze it so you can enjoy a taste of spring in November.</p>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="article-card" data-category="baking" data-title="brown butter cornbread">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1595475207225-428b62bda831?w=400&q=80" alt="Skillet cornbread with a golden crust and butter melting on top" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Baking</span>
+              <h3><a href="#">Brown Butter Skillet Cornbread with Honey & Thyme</a></h3>
+              <div class="article-card-meta">
+                <span>February 22, 2025</span>
+                <span>10 min read</span>
+              </div>
+              <p>This isn't your boxed mix cornbread. We brown the butter until nutty, fold in fresh thyme, and finish the whole thing with a drizzle of wildflower honey. Baked in a screaming-hot cast iron skillet, it develops a crust that shatters. Perfect alongside chili, braises, or a bowl of beans.</p>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="article-card" data-category="preserving" data-title="fermented hot sauce">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80" alt="Fermenting hot sauce in a glass jar with peppers and brine" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Preserving</span>
+              <h3><a href="#">Fermented Hot Sauce: The Two-Week Project That Pays Off All Year</a></h3>
+              <div class="article-card-meta">
+                <span>February 18, 2025</span>
+                <span>12 min read</span>
+              </div>
+              <p>Lacto-fermented hot sauce has a complexity that vinegar-based sauces can't touch. We guide you through selecting peppers, managing brine, and blending a sauce that's tangy, fiery, and deeply savory. Includes a troubleshooting guide for kahm yeast and mold.</p>
+            </div>
+          </article>
+
+          <!-- Article 7 -->
+          <article class="article-card" data-category="technique" data-title="braising liquid ratios">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" alt="A Dutch oven filled with braising liquid and vegetables" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Technique</span>
+              <h3><a href="#">The Braising Liquid Ratio That Changed My Cooking</a></h3>
+              <div class="article-card-meta">
+                <span>February 14, 2025</span>
+                <span>6 min read</span>
+              </div>
+              <p>Too much liquid and you're boiling. Too little and you're roasting. The perfect braise sits in a narrow window — and it comes down to a simple ratio of liquid to meat. We explain the 1:3 rule, when to break it, and how to adjust for different cuts.</p>
+            </div>
+          </article>
+
+          <!-- Article 8 -->
+          <article class="article-card" data-category="seasonal" data-title="winter citrus salad">
+            <img class="article-card-img" src="https://images.unsplash.com/photo-1547514701-42782101795e?w=400&q=80" alt="Winter citrus salad with blood oranges and fennel" loading="lazy">
+            <div class="article-card-body">
+              <span class="category-tag">Seasonal</span>
+              <h3><a href="#">Winter Citrus & Fennel Salad with Pistachio Crunch</a></h3>
+              <div class="article-card-meta">
+                <span>February 10, 2025</span>
+                <span>5 min read</span>
+              </div>
+              <p>When winter vegetables feel heavy, citrus comes to the rescue. This salad pairs blood oranges, grapefruit, and shaved fennel with a pistachio-mint crumble. It's bright, crunchy, and comes together in fifteen minutes — a perfect antidote to rich braises.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- PAGINATION / LOAD MORE -->
+        <div class="text-center mt-2">
+          <button class="category-btn" id="loadMoreBtn" style="padding: 0.7rem 2rem; font-size: 0.9rem;">Load More Articles</button>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: SIDEBAR -->
+      <aside class="sidebar" role="complementary">
+        <!-- ABOUT WIDGET -->
+        <div class="sidebar-widget" id="about">
+          <h3>About the Pantry</h3>
+          <div class="about-author">
+            <div class="author-avatar">EH</div>
+            <div class="author-info">
+              <strong>Eliza Hartwell</strong>
+              Editor & Recipe Developer
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Flint Apron Pantry is a reader-supported journal for cooks who want to understand the "why" behind the recipe. We test everything, sometimes twice, and always with a glass of wine nearby.</p>
+        </div>
+
+        <!-- POPULAR ARTICLES -->
+        <div class="sidebar-widget">
+          <h3>Most Popular</h3>
+          <ul>
+            <li><a href="#">The Lost Art of Sourdough Hydration</a><span class="meta-small">14 min read</span></li>
+            <li><a href="#">Red Wine & Juniper Braised Short Ribs</a><span class="meta-small">11 min read</span></li>
+            <li><a href="#">Fermented Hot Sauce: A Two-Week Project</a><span class="meta-small">12 min read</span></li>
+            <li><a href="#">The Maillard Reaction: Why Your Sear Isn't Working</a><span class="meta-small">8 min read</span></li>
+            <li><a href="#">Brown Butter Skillet Cornbread</a><span class="meta-small">10 min read</span></li>
+          </ul>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="sidebar-widget">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Baking (12)</a></li>
+            <li><a href="#">Braising (9)</a></li>
+            <li><a href="#">Preserving (8)</a></li>
+            <li><a href="#">Technique (15)</a></li>
+            <li><a href="#">Seasonal (11)</a></li>
+          </ul>
+        </div>
+
+        <!-- NEWSLETTER MINI -->
+        <div class="sidebar-widget" style="background: #f5f0e9;">
+          <h3>Get the Weekly Digest</h3>
+          <p style="font-size: 0.9rem;">One email every Sunday. Recipes, techniques, and a short essay on cooking well.</p>
+          <form class="newsletter-form" style="flex-direction: column; gap: 0.5rem;" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Your email address" required style="min-width: auto; width: 100%;">
+            <button type="submit" style="width: 100%;">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ========== NEWSLETTER SECTION ========== -->
+  <section class="newsletter-section" aria-label="Newsletter signup">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h2>The Sunday Pantry</h2>
+        <p>Join 12,000 cooks who get one thoughtful email each week. No spam, just recipes and stories.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welcome to The Sunday Pantry!');">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Do I need special equipment to start?</h4>
+        <p>Not at all. A cast iron skillet, a Dutch oven, and a few glass jars will get you through 90% of our recipes. We're firm believers that good cooking is about technique, not tools.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Are your recipes tested?</h4>
+        <p>Every single one. We test each recipe at least twice — once in our home kitchen and once in a borrowed kitchen with different equipment — before it's published.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I use your recipes in my own blog?</h4>
+        <p>We're happy to be inspired by each other, but please don't copy our recipes verbatim. Rewrite in your own words, credit us with a link, and share the love.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do you choose which recipes to feature?</h4>
+        <p>We look for dishes that teach something — a technique, a ratio, a principle. If a recipe only works once, it's not for us. We want recipes you'll cook for years.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you accept guest posts?</h4>
+        <p>Rarely, and only from cooks we've followed for a while. If you have a story about food that feels like it belongs here, send us a note via the contact page.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What does "Flint Apron" mean?</h4>
+        <p>It's a nod to the flint stones used to start fires — and the aprons our grandmothers wore while tending those fires. It's about tradition, patience, and the spark of a good meal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT / CONTACT / PRIVACY / TERMS / COOKIE CONTENT ========== -->
+  <section class="container" style="padding-bottom: 3rem;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 id="about-section">About Flint Apron Pantry</h2>
+      <p>Flint Apron Pantry began in a small kitchen in the Pacific Northwest, where the rain kept us indoors and the oven kept us warm. We're a reader-supported publication — no ads, no sponsored content, just recipes and stories that we believe in.</p>
+      <p>Our editorial approach is simple: we cook, we write, we test again. Every recipe on this site has been made in a home kitchen, with ingredients you can find at a well-stocked grocery store or farmers market.</p>
+
+      <h2 id="contact-section">Contact</h2>
+      <p>We love hearing from readers. Whether you have a question about a recipe, a correction, or just want to say hello, you can reach us at <strong>hello@flintapronpantry.com</strong>. We read every email, though it may take us a few days to respond.</p>
+
+      <h2 id="privacy-section">Privacy Policy</h2>
+      <p>We take your privacy seriously. Flint Apron Pantry collects only the information you voluntarily provide — your email address when you subscribe to our newsletter, and any messages you send us directly. We never sell, rent, or share your personal information with third parties.</p>
+      <p>Our site uses basic analytics to understand which articles are resonating with readers. This data is anonymized and aggregated. We do not use tracking pixels, and we do not serve targeted advertising.</p>
+
+      <h2 id="terms-section">Terms of Use</h2>
+      <p>All content on Flint Apron Pantry — recipes, photographs, and written articles — is protected by copyright. You may print recipes for personal use and share links freely. You may not republish our content without written permission.</p>
+      <p>We do our best to provide accurate, tested recipes, but cooking involves variables. Use your judgment, trust your senses, and always practice food safety.</p>
+
+      <h2 id="cookie-section">Cookie Policy</h2>
+      <p>Flint Apron Pantry uses a minimal number of cookies — primarily to remember your preferences and to help us understand which pages are most useful. You can disable cookies in your browser settings at any time, and the site will continue to work just fine.</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size: 1.4rem;">
+          <span class="logo-mark" style="background: #d4a373; color: #2c2a26;">F</span>
+          Flint Apron <span>Pantry</span>
+        </div>
+        <p>An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Pantry</a></li>
+          <li><a href="#">Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about-section">Our Story</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Write for Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#privacy-section">Privacy</a></li>
+          <li><a href="#terms-section">Terms</a></li>
+          <li><a href="#cookie-section">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flint Apron Pantry. All rights reserved.</span>
+      <span>Made with flour, butter, and patience.</span>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+        });
+      }
+
+      // Search & category filtering
+      const searchInput = document.getElementById('searchInput');
+      const categoryBtns = document.querySelectorAll('.category-btn[data-category]');
+      const articleCards = document.querySelectorAll('.article-card');
+      const featuredArticle = document.querySelector('.featured-article');
+
+      let activeCategory = 'all';
+      let searchTerm = '';
+
+      function filterArticles() {
+        const term = searchTerm.toLowerCase().trim();
+        
+        // Featured article: hide if search doesn't match and not 'all'
+        if (featuredArticle) {
+          const title = featuredArticle.getAttribute('data-title') || '';
+          const category = featuredArticle.getAttribute('data-category') || '';
+          const matchesSearch = term === '' || title.includes(term);
+          const matchesCategory = activeCategory === 'all' || category === activeCategory;
+          featuredArticle.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+        }
+
+        // Article cards
+        articleCards.forEach(card => {
+          const title = card.getAttribute('data-title') || '';
+          const category = card.getAttribute('data-category') || '';
+          const matchesSearch = term === '' || title.includes(term);
+          const matchesCategory = activeCategory === 'all' || category === activeCategory;
+          card.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+        });
+      }
+
+      // Category button clicks
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          activeCategory = this.getAttribute('data-category');
+          filterArticles();
+        });
+      });
+
+      // Search input
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          searchTerm = this.value;
+          filterArticles();
+        });
+      }
+
+      // Load more button (simulated — shows all hidden articles if any, or just alert)
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+          // In a real blog, this would load more posts via AJAX.
+          // Here, we simply show a friendly message and reveal any hidden cards (if filtering was active).
+          const hiddenCards = document.querySelectorAll('.article-card[style*="display: none"]');
+          if (hiddenCards.length > 0) {
+            hiddenCards.forEach(card => card.style.display = '');
+            loadMoreBtn.textContent = 'All Articles Loaded';
+            loadMoreBtn.disabled = true;
+            loadMoreBtn.style.opacity = '0.5';
+            loadMoreBtn.style.cursor = 'default';
+          } else {
+            alert('You\'ve reached the end of our archive. New recipes are published every week — subscribe to stay updated!');
+          }
+        });
+      }
+
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu if open
+            if (navLinks.classList.contains('open')) {
+              navLinks.classList.remove('open');
+              menuToggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      });
+
+      // Initialize filter
+      filterArticles();
+    })();
+  </script>
+
+  <!-- ========== SCHEMA MARKUP ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Flint Apron Pantry",
+    "description": "Slow-cooked stories, heirloom techniques, and practical kitchen wisdom. A recipe journal for cooks who read.",
+    "url": "https://flintapronpantry.com/",
+    "author": {
+      "@type": "Person",
+      "name": "Eliza Hartwell"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "The Lost Art of Sourdough Hydration: Going Beyond 75%",
+        "description": "Most modern sourdough advice stops at 75% hydration. But older European baking traditions pushed dough much further — and the results were extraordinary.",
+        "datePublished": "2025-03-12",
+        "author": { "@type": "Person", "name": "Eliza Hartwell" },
+        "image": "https://images.unsplash.com/photo-1585478259715-876acc5be8eb?w=800&q=80"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Red Wine & Juniper Braised Short Ribs: A Sunday Ritual",
+        "description": "There are braises that feed you, and braises that change you.",
+        "datePublished": "2025-03-08",
+        "author": { "@type": "Person", "name": "Eliza Hartwell" }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need special equipment to start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. A cast iron skillet, a Dutch oven, and a few glass jars will get you through 90% of our recipes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your recipes tested?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every single one. We test each recipe at least twice before it's published."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

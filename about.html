@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Flint Apron Pantry</title>
+  <meta name="description" content="Flint Apron Pantry is a reader-supported recipe journal. Learn about our story, editorial approach, and the team behind the recipes.">
+  <link rel="canonical" href="https://flintapronpantry.com/about.html">
+  <meta property="og:title" content="About Flint Apron Pantry">
+  <meta property="og:description" content="Slow-cooked stories, heirloom techniques, and practical kitchen wisdom. Learn about our story.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flintapronpantry.com/about.html">
+  <meta property="og:image" content="https://flintapronpantry.com/images/og-flint-apron.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (same as homepage) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #fcf9f4;
+      --ink: #2c2a26;
+      --ink-soft: #4f4b44;
+      --muted: #7a746b;
+      --border: #e2dbd1;
+      --accent: #9d5c3c;
+      --accent-hover: #7e452a;
+      --card-bg: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; color: var(--ink-soft); }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      background-color: rgba(252, 249, 244, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ---------- ABOUT PAGE CONTENT ---------- */
+    .about-page {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .about-page .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-page .page-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-page .page-header p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .about-page .about-image {
+      margin: 2rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .about-page .about-image img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .about-page .about-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .about-page .about-body h2 {
+      margin-top: 2.5rem;
+    }
+
+    .about-page .about-body h3 {
+      margin-top: 2rem;
+    }
+
+    .about-page .about-body ul {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+      color: var(--ink-soft);
+    }
+
+    .about-page .about-body ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .about-page .about-body blockquote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+    }
+
+    .about-page .about-body blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* Author card */
+    .author-card {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .author-card .author-avatar-lg {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .author-card .author-details h3 {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+      font-size: 1.25rem;
+    }
+
+    .author-card .author-details p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .site-footer {
+      background: #2c2a26;
+      color: #d9d2c8;
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span {
+      color: #d4a373;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: #a89f94;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #b8afa4;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #d4a373;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid #3f3b35;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8176;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 1rem 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-page .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .author-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      .about-page .page-header h1 { font-size: 1.7rem; }
+    }
+
+    /* ---------- UTILITY ---------- */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Flint Apron Pantry home">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        Flint Apron <span>Pantry</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ABOUT CONTENT ========== -->
+  <main class="about-page" role="main">
+    <div class="page-header">
+      <h1>About Flint Apron Pantry</h1>
+      <p>Slow-cooked stories, heirloom techniques, and practical kitchen wisdom — for cooks who read.</p>
+    </div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80" alt="A rustic kitchen scene with a cast iron skillet, fresh herbs, and a linen apron" loading="lazy">
+    </div>
+
+    <div class="about-body">
+      <p><strong>Flint Apron Pantry</strong> began in a small kitchen in the Pacific Northwest, where the rain kept us indoors and the oven kept us warm. What started as a personal collection of family recipes — scribbled on index cards and stained with butter — grew into a journal for anyone who believes that cooking is more than just following instructions.</p>
+
+      <p>We are a reader-supported publication. No ads, no sponsored content, no hidden agendas. Just recipes and stories we believe in, tested in home kitchens and written for people who want to understand the <em>why</em> behind the <em>how</em>.</p>
+
+      <h2>Our Editorial Approach</h2>
+      <p>Every recipe on this site has been made in a home kitchen, with ingredients you can find at a well-stocked grocery store or farmers market. We test each recipe at least twice — once in our own kitchen and once in a borrowed kitchen with different equipment — before it's published.</p>
+
+      <p>We look for dishes that teach something: a technique, a ratio, a principle. If a recipe only works once, it's not for us. We want recipes you'll cook for years, the kind that become part of your own family's story.</p>
+
+      <blockquote>
+        <p>“We're firm believers that good cooking is about technique, not tools. A cast iron skillet, a Dutch oven, and a few glass jars will get you through 90% of what we make.”</p>
+      </blockquote>
+
+      <h2>What "Flint Apron" Means</h2>
+      <p>It's a nod to the flint stones used to start fires — and the aprons our grandmothers wore while tending those fires. It's about tradition, patience, and the spark of a good meal. The name reminds us that cooking is an ancient craft, passed down hand to hand, generation to generation.</p>
+
+      <h2>Meet the Editor</h2>
+
+      <div class="author-card">
+        <div class="author-avatar-lg">EH</div>
+        <div class="author-details">
+          <h3>Eliza Hartwell</h3>
+          <p>Editor & Recipe Developer</p>
+          <p style="margin-top: 0.5rem; font-size: 0.9rem;">Eliza has been cooking professionally and writing about food for over a decade. She believes that the best meals are the ones that take time, and that a well-worn apron is a badge of honor. When she's not testing recipes, she's tending her sourdough starter or hunting for ramps in the spring.</p>
+        </div>
+      </div>
+
+      <h2>Our Promise to You</h2>
+      <ul>
+        <li><strong>Tested recipes:</strong> Every recipe is made at least twice before it's published.</li>
+        <li><strong>No ads, no sponsored content:</strong> We're reader-supported and independent.</li>
+        <li><strong>Privacy respected:</strong> We never sell or share your information.</li>
+        <li><strong>Real food:</strong> Accessible ingredients, honest techniques, and stories worth reading.</li>
+      </ul>
+
+      <p>Whether you're here to master sourdough, perfect a braise, or simply find something good to cook for dinner, we're glad you're here. Pull up a chair, pour a glass of wine, and let's get cooking.</p>
+
+      <p style="margin-top: 2rem; font-style: italic; color: var(--muted);">— The Flint Apron Pantry Team</p>
+    </div>
+
+    <!-- Internal link back to homepage / recipes -->
+    <div class="text-center mt-2" style="padding-top: 2rem;">
+      <a href="index.html" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.8rem 2rem; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; transition: background 0.15s;" onmouseover="this.style.background='#7e452a'" onmouseout="this.style.background='#9d5c3c'">Browse Recipes</a>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size: 1.4rem;">
+          <span class="logo-mark" style="background: #d4a373; color: #2c2a26;">F</span>
+          Flint Apron <span>Pantry</span>
+        </div>
+        <p>An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Pantry</a></li>
+          <li><a href="#">Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Write for Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flint Apron Pantry. All rights reserved.</span>
+      <span>Made with flour, butter, and patience.</span>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT (mobile menu only) ========== -->
+  <script>
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <!-- ========== SCHEMA MARKUP (AboutPage) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Flint Apron Pantry",
+    "description": "Flint Apron Pantry is a reader-supported recipe journal. Learn about our story, editorial approach, and the team behind the recipes.",
+    "url": "https://flintapronpantry.com/about.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Flint Apron Pantry",
+      "description": "An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.",
+      "url": "https://flintapronpantry.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Eliza Hartwell"
+      }
+    }
+  }
+  </script>
+</body>
+</html>

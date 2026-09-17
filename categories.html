@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories | Flint Apron Pantry</title>
+  <meta name="description" content="Browse all recipe categories on Flint Apron Pantry: breakfast, breads, mains, desserts, seasonal, and pantry staples. Find your next favorite dish.">
+  <link rel="canonical" href="https://flintapronpantry.com/categories.html">
+  <meta property="og:title" content="Categories | Flint Apron Pantry">
+  <meta property="og:description" content="Explore our curated recipe categories — from heirloom breads to seasonal preserves.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flintapronpantry.com/categories.html">
+  <meta property="og:image" content="https://flintapronpantry.com/images/og-flint-apron.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (same as terms) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #fcf9f4;
+      --ink: #2c2a26;
+      --ink-soft: #4f4b44;
+      --muted: #7a746b;
+      --border: #e2dbd1;
+      --accent: #9d5c3c;
+      --accent-hover: #7e452a;
+      --card-bg: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; color: var(--ink-soft); }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER (exact same as terms) ---------- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      background-color: rgba(252, 249, 244, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ---------- CATEGORIES PAGE SPECIFIC ---------- */
+    .categories-page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .categories-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .categories-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .categories-header p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Grid of category cards */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .category-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #e8e0d6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b8aa9c;
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .card-content {
+      padding: 1.5rem 1.5rem 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-content h3 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .recipe-count {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: auto;
+      transition: color 0.15s;
+    }
+
+    .card-link:hover {
+      color: var(--accent-hover);
+    }
+
+    .card-link::after {
+      content: "→";
+      font-size: 1rem;
+      transition: transform 0.15s;
+    }
+
+    .card-link:hover::after {
+      transform: translateX(4px);
+    }
+
+    /* Featured / callout strip */
+    .featured-strip {
+      background: #f5efe8;
+      border-left: 4px solid var(--accent);
+      padding: 1.75rem 2rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 3rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .featured-strip p {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+    }
+
+    .featured-strip strong {
+      color: var(--ink);
+    }
+
+    /* All categories list / tag cloud */
+    .all-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .tag {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 0.35rem 1rem;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      transition: all 0.15s;
+    }
+
+    .tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #fdf8f4;
+    }
+
+    /* Back link / browse all */
+    .back-home {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      color: #fff;
+    }
+
+    /* ---------- FOOTER (exact same) ---------- */
+    .site-footer {
+      background: #2c2a26;
+      color: #d9d2c8;
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span {
+      color: #d4a373;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: #a89f94;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #b8afa4;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #d4a373;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid #3f3b35;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8176;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 1rem 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .categories-header h1 {
+        font-size: 2rem;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .featured-strip {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      .categories-header h1 { font-size: 1.7rem; }
+      .card-image {
+        height: 160px;
+      }
+    }
+
+    /* ---------- UTILITY ---------- */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+
+    /* Emoji fallback for card images */
+    .card-image span {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Flint Apron Pantry home">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        Flint Apron <span>Pantry</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CATEGORIES CONTENT ========== -->
+  <main class="categories-page" role="main">
+    <div class="categories-header">
+      <h1>Recipe Categories</h1>
+      <p>From slow mornings to midnight cravings — find exactly what you're hungry for.</p>
+    </div>
+
+    <!-- Featured category highlight -->
+    <div class="featured-strip">
+      <p><strong>Seasonal spotlight:</strong> Spring has arrived — explore fresh peas, rhubarb, and wild garlic.</p>
+      <a href="#" class="btn" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">View Spring</a>
+    </div>
+
+    <!-- Category grid (8 cards) -->
+    <div class="category-grid">
+      <!-- 1. Breakfast & Brunch -->
+      <article class="category-card">
+        <div class="card-image" style="background: #e8d9c8;">
+          <span aria-hidden="true">🍳</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">18 recipes</span>
+          <h3>Breakfast & Brunch</h3>
+          <p>Slow eggs, buttermilk pancakes, skillet hashes, and morning breads to start the day right.</p>
+          <a href="#" class="card-link" aria-label="Browse Breakfast and Brunch recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 2. Breads & Baking -->
+      <article class="category-card">
+        <div class="card-image" style="background: #e8d2b0;">
+          <span aria-hidden="true">🍞</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">24 recipes</span>
+          <h3>Breads & Baking</h3>
+          <p>Sourdough, focaccia, biscuits, and sweet loaves — flour, water, salt, and patience.</p>
+          <a href="#" class="card-link" aria-label="Browse Breads and Baking recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 3. Mains & Dinners -->
+      <article class="category-card">
+        <div class="card-image" style="background: #d9c2a8;">
+          <span aria-hidden="true">🍲</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">32 recipes</span>
+          <h3>Mains & Dinners</h3>
+          <p>Hearty braises, weeknight pastas, roasted vegetables, and one-pot comfort food.</p>
+          <a href="#" class="card-link" aria-label="Browse Mains and Dinners recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 4. Desserts & Sweets -->
+      <article class="category-card">
+        <div class="card-image" style="background: #e8cfc0;">
+          <span aria-hidden="true">🍰</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">21 recipes</span>
+          <h3>Desserts & Sweets</h3>
+          <p>Cakes, tarts, cookies, and puddings — because every meal deserves a sweet ending.</p>
+          <a href="#" class="card-link" aria-label="Browse Desserts and Sweets recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 5. Seasonal & Preserves -->
+      <article class="category-card">
+        <div class="card-image" style="background: #d4c5a9;">
+          <span aria-hidden="true">🍓</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">15 recipes</span>
+          <h3>Seasonal & Preserves</h3>
+          <p>Jams, pickles, ferments, and recipes that celebrate what's growing right now.</p>
+          <a href="#" class="card-link" aria-label="Browse Seasonal and Preserves recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 6. Pantry Staples -->
+      <article class="category-card">
+        <div class="card-image" style="background: #d9cbb8;">
+          <span aria-hidden="true">🫙</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">12 recipes</span>
+          <h3>Pantry Staples</h3>
+          <p>Stocks, sauces, spice blends, and condiments — the building blocks of good cooking.</p>
+          <a href="#" class="card-link" aria-label="Browse Pantry Staples recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 7. Soups & Stews -->
+      <article class="category-card">
+        <div class="card-image" style="background: #c9b8a6;">
+          <span aria-hidden="true">🥣</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">14 recipes</span>
+          <h3>Soups & Stews</h3>
+          <p>Bowl food for every season: brothy, creamy, spicy, and deeply comforting.</p>
+          <a href="#" class="card-link" aria-label="Browse Soups and Stews recipes">Browse category</a>
+        </div>
+      </article>
+
+      <!-- 8. Drinks & Cocktails -->
+      <article class="category-card">
+        <div class="card-image" style="background: #d9c9b5;">
+          <span aria-hidden="true">🍹</span>
+        </div>
+        <div class="card-content">
+          <span class="recipe-count">9 recipes</span>
+          <h3>Drinks & Cocktails</h3>
+          <p>Herbal infusions, classic cocktails, and non-alcoholic refreshers for any hour.</p>
+          <a href="#" class="card-link" aria-label="Browse Drinks and Cocktails recipes">Browse category</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- All tags / quick links to other categories -->
+    <h2 style="font-size: 1.4rem; margin-top: 1rem;">More ways to browse</h2>
+    <div class="all-tags">
+      <a href="#" class="tag">Vegan</a>
+      <a href="#" class="tag">Gluten-Free</a>
+      <a href="#" class="tag">Quick & Easy</a>
+      <a href="#" class="tag">Slow Cooker</a>
+      <a href="#" class="tag">One-Pan</a>
+      <a href="#" class="tag">Heirloom</a>
+      <a href="#" class="tag">Fermentation</a>
+      <a href="#" class="tag">Holiday</a>
+      <a href="#" class="tag">Kid-Friendly</a>
+      <a href="#" class="tag">Meal Prep</a>
+      <a href="#" class="tag">Budget</a>
+      <a href="#" class="tag">No-Bake</a>
+      <a href="#" class="tag">Grilling</a>
+      <a href="#" class="tag">Comfort Food</a>
+    </div>
+
+    <!-- Back home / browse all recipes -->
+    <div class="back-home">
+      <a href="index.html" class="btn">Browse All Recipes</a>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size: 1.4rem;">
+          <span class="logo-mark" style="background: #d4a373; color: #2c2a26;">F</span>
+          Flint Apron <span>Pantry</span>
+        </div>
+        <p>An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Pantry</a></li>
+          <li><a href="#">Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Write for Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flint Apron Pantry. All rights reserved.</span>
+      <span>Made with flour, butter, and patience.</span>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT (mobile menu only) ========== -->
+  <script>
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <!-- ========== SCHEMA MARKUP (CollectionPage) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Categories | Flint Apron Pantry",
+    "description": "Browse all recipe categories on Flint Apron Pantry: breakfast, breads, mains, desserts, seasonal, and pantry staples.",
+    "url": "https://flintapronpantry.com/categories.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Flint Apron Pantry",
+      "url": "https://flintapronpantry.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Recipe Categories"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Breakfast & Brunch" },
+        { "@type": "ListItem", "position": 2, "name": "Breads & Baking" },
+        { "@type": "ListItem", "position": 3, "name": "Mains & Dinners" },
+        { "@type": "ListItem", "position": 4, "name": "Desserts & Sweets" },
+        { "@type": "ListItem", "position": 5, "name": "Seasonal & Preserves" },
+        { "@type": "ListItem", "position": 6, "name": "Pantry Staples" },
+        { "@type": "ListItem", "position": 7, "name": "Soups & Stews" },
+        { "@type": "ListItem", "position": 8, "name": "Drinks & Cocktails" }
+      ]
+    }
+  }
+  </script>
+</body>
+</html>

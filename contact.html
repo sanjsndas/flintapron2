@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Flint Apron Pantry</title>
+  <meta name="description" content="Get in touch with Flint Apron Pantry. Questions, corrections, or just a hello — we read every email.">
+  <link rel="canonical" href="https://flintapronpantry.com/contact.html">
+  <meta property="og:title" content="Contact | Flint Apron Pantry">
+  <meta property="og:description" content="Questions, corrections, or just a hello — we read every email.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flintapronpantry.com/contact.html">
+  <meta property="og:image" content="https://flintapronpantry.com/images/og-flint-apron.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #fcf9f4;
+      --ink: #2c2a26;
+      --ink-soft: #4f4b44;
+      --muted: #7a746b;
+      --border: #e2dbd1;
+      --accent: #9d5c3c;
+      --accent-hover: #7e452a;
+      --card-bg: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; color: var(--ink-soft); }
+
+    .article-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      margin-top: 2.5rem;
+    }
+
+    .article-body h3 {
+      margin-top: 2rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      background-color: rgba(252, 249, 244, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ---------- PAGE CONTENT ---------- */
+    .page-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---------- CONTACT CARD ---------- */
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2rem;
+    }
+
+    .contact-card h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: #f5f0e9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+
+    .contact-detail h3 {
+      font-size: 1rem;
+      margin-top: 0;
+      margin-bottom: 0.2rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+
+    .contact-detail p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    .contact-detail a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .contact-detail a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- FORM ---------- */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      background: var(--paper);
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .submit-btn {
+      align-self: flex-start;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.8rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ---------- RESPONSE NOTE ---------- */
+    .response-note {
+      background: #f5f0e9;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .response-note p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .response-note strong {
+      color: var(--ink);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: #2c2a26;
+      color: #d9d2c8;
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span {
+      color: #d4a373;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: #a89f94;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #b8afa4;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #d4a373;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid #3f3b35;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8176;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 1rem 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .page-header h1 {
+        font-size: 1.9rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 1.5rem;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      .page-header h1 { font-size: 1.6rem; }
+      .contact-card { padding: 1.25rem; }
+      .submit-btn { width: 100%; text-align: center; }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Flint Apron Pantry home">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        Flint Apron <span>Pantry</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="page-content" role="main">
+    <div class="page-header">
+      <h1>Get in Touch</h1>
+      <p>We love hearing from readers. Whether you have a question about a recipe, a correction, or just want to say hello — we read every message.</p>
+    </div>
+
+    <!-- Contact Information Card -->
+    <div class="contact-card">
+      <h2>Ways to Reach Us</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">✉️</div>
+          <div class="contact-detail">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@flintapronpantry.com">hello@flintapronpantry.com</a></p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">We reply within 2–3 business days.</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📍</div>
+          <div class="contact-detail">
+            <h3>Based In</h3>
+            <p>Pacific Northwest, USA</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">Testing recipes come rain or shine.</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">💬</div>
+          <div class="contact-detail">
+            <h3>Social</h3>
+            <p><a href="#">@flintapronpantry</a> on Instagram</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">DMs open, but email is best.</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">📝</div>
+          <div class="contact-detail">
+            <h3>Corrections</h3>
+            <p>Spotted a typo or a measurement that's off?</p>
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.2rem;">Please include the article title.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-card">
+      <h2>Send a Message</h2>
+      <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Eliza Hartwell" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General Question</option>
+            <option value="recipe">Recipe Help</option>
+            <option value="correction">Correction / Typo</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind…" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <p class="form-note">We'll never share your email. Ever. It's just between us.</p>
+      </form>
+    </div>
+
+    <!-- Response Note -->
+    <div class="response-note">
+      <p><strong>A note on timing:</strong> This is a small, independent operation. We don't have a support team — just a cook with a laptop and a stack of recipe notes. We read every email, but it may take us a few days to reply. Thanks for your patience, and for reading.</p>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size: 1.4rem;">
+          <span class="logo-mark" style="background: #d4a373; color: #2c2a26;">F</span>
+          Flint Apron <span>Pantry</span>
+        </div>
+        <p>An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Pantry</a></li>
+          <li><a href="#">Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Write for Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flint Apron Pantry. All rights reserved.</span>
+      <span>Made with flour, butter, and patience.</span>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    // Handle contact form submission
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+      
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Simple email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+      
+      // In a real site, this would send via a backend or service.
+      // Here, we show a friendly confirmation and reset the form.
+      alert(`Thank you, ${name}! Your message about "${subject}" has been received. We'll get back to you at ${email} within a few days.`);
+      
+      document.getElementById('contactForm').reset();
+    }
+
+    // Smooth scroll for internal links (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (navLinks && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+    });
+  </script>
+
+  <!-- ========== SCHEMA MARKUP ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Flint Apron Pantry",
+    "description": "Get in touch with Flint Apron Pantry. Questions, corrections, or just a hello — we read every email.",
+    "url": "https://flintapronpantry.com/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Flint Apron Pantry",
+      "email": "hello@flintapronpantry.com",
+      "url": "https://flintapronpantry.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Eliza Hartwell"
+      }
+    }
+  }
+  </script>
+</body>
+</html>

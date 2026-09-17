@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Privacy | Flint Apron Pantry</title>
+  <meta name="description" content="Terms of Privacy for Flint Apron Pantry: your rights, our responsibilities, and how we handle content and data on our recipe journal.">
+  <link rel="canonical" href="https://flintapronpantry.com/terms.html">
+  <meta property="og:title" content="Terms of Privacy | Flint Apron Pantry">
+  <meta property="og:description" content="Read the terms and privacy conditions for using Flint Apron Pantry. Clear, honest, and kitchen-friendly.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flintapronpantry.com/terms.html">
+  <meta property="og:image" content="https://flintapronpantry.com/images/og-flint-apron.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* ---------- RESET & VARIABLES (same as homepage / about) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #fcf9f4;
+      --ink: #2c2a26;
+      --ink-soft: #4f4b44;
+      --muted: #7a746b;
+      --border: #e2dbd1;
+      --accent: #9d5c3c;
+      --accent-hover: #7e452a;
+      --card-bg: #ffffff;
+      --font-serif: 'Georgia', 'Times New Roman', 'Times', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+      --radius: 6px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+
+    h1 { font-size: 2.2rem; letter-spacing: -0.01em; }
+    h2 { font-size: 1.7rem; margin-top: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1.25rem; color: var(--ink-soft); }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      background-color: rgba(252, 249, 244, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      line-height: 1;
+    }
+
+    .logo span {
+      font-weight: 400;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.5rem 0.75rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    /* ---------- TERMS PAGE CONTENT (similar to about) ---------- */
+    .terms-page {
+      max-width: var(--article-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .terms-page .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .terms-page .page-header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .terms-page .page-header p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .terms-page .terms-body p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .terms-page .terms-body h2 {
+      margin-top: 2.5rem;
+    }
+
+    .terms-page .terms-body h3 {
+      margin-top: 2rem;
+    }
+
+    .terms-page .terms-body ul {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+      color: var(--ink-soft);
+    }
+
+    .terms-page .terms-body ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .terms-page .terms-body blockquote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+    }
+
+    .terms-page .terms-body blockquote p {
+      margin-bottom: 0;
+    }
+
+    .terms-highlight {
+      background: #f5efe8;
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.75rem;
+      margin: 2rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 1rem;
+      color: var(--ink-soft);
+    }
+
+    .terms-highlight strong {
+      color: var(--ink);
+    }
+
+    .terms-page .last-updated {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .site-footer {
+      background: #2c2a26;
+      color: #d9d2c8;
+      padding: 3rem 0 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand .logo span {
+      color: #d4a373;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: #a89f94;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: #b8afa4;
+      font-size: 0.85rem;
+    }
+
+    .footer-col a:hover {
+      color: #d4a373;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.5rem 0;
+      border-top: 1px solid #3f3b35;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8176;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+        padding: 1rem 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .terms-page .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      .terms-page .page-header h1 { font-size: 1.7rem; }
+    }
+
+    /* ---------- UTILITY ---------- */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-2 {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Flint Apron Pantry home">
+        <span class="logo-mark" aria-hidden="true">F</span>
+        Flint Apron <span>Pantry</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html" class="active">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== MAIN TERMS CONTENT ========== -->
+  <main class="terms-page" role="main">
+    <div class="page-header">
+      <h1>Terms of Privacy</h1>
+      <p>Plain-language terms covering content, privacy, and your use of Flint Apron Pantry.</p>
+    </div>
+
+    <div class="last-updated">Last updated: March 2025</div>
+
+    <div class="terms-body">
+      <p><strong>Flint Apron Pantry</strong> (“we”, “us”, “our”) operates flintapronpantry.com (the “Site”). By using the Site, you agree to these Terms of Privacy. We've written them to be clear and readable — not to hide behind legalese. If you have questions, <a href="contact.html">contact us</a>.</p>
+
+      <div class="terms-highlight">
+        <strong>Short version:</strong> We respect your privacy, we don't sell your data, and we ask that you respect our content. Cook, read, enjoy — and if you share a recipe, link back to us.
+      </div>
+
+      <h2>1. Content & Intellectual Property</h2>
+      <p>All recipes, articles, photographs, illustrations, and other content on Flint Apron Pantry are owned by us or our contributors and are protected by copyright. You are welcome to:</p>
+      <ul>
+        <li>Cook our recipes for personal, non-commercial use.</li>
+        <li>Print or save recipes for your own kitchen use.</li>
+        <li>Share a link to any page on our Site.</li>
+        <li>Quote a short excerpt (up to 2–3 sentences) with clear attribution and a link back to the original page.</li>
+      </ul>
+      <p>You may <strong>not</strong> republish full recipes or articles, use our content for AI training without permission, or sell our content. If you'd like to feature our work, please <a href="contact.html">reach out</a> — we're often happy to collaborate.</p>
+
+      <h2>2. Privacy & Data Collection</h2>
+      <p>We collect very little data, and we never sell it. Here's what we do collect and why:</p>
+      <h3>Information you give us</h3>
+      <p>If you subscribe to our newsletter or contact us via email, we collect your name and email address. We use this only to send you updates or reply to your message. You can unsubscribe at any time.</p>
+      <h3>Information collected automatically</h3>
+      <p>Like most websites, we use basic analytics (such as privacy-friendly, aggregate stats) to understand which recipes are popular. This data is anonymized and cannot be used to identify you personally. We do not use invasive tracking or sell any data to third parties.</p>
+      <h3>Cookies</h3>
+      <p>We use a minimal number of cookies for site functionality and anonymous analytics. You can control cookies through your browser settings. For more detail, see our <a href="cookies.html">Cookies Policy</a>.</p>
+
+      <h2>3. Your Privacy Rights</h2>
+      <p>Depending on your location (e.g., under GDPR or CCPA), you may have the right to:</p>
+      <ul>
+        <li>Request a copy of any personal data we hold about you.</li>
+        <li>Request that we delete your personal data.</li>
+        <li>Opt out of marketing communications at any time.</li>
+        <li>Ask us anything about how your data is handled.</li>
+      </ul>
+      <p>To exercise any of these rights, please <a href="contact.html">contact us</a>. We'll respond within 30 days.</p>
+
+      <h2>4. Third-Party Links & Services</h2>
+      <p>Our Site may link to third-party websites (for example, ingredient sources or kitchen tools). We are not responsible for their content or privacy practices. We encourage you to read their policies before interacting with them.</p>
+
+      <h2>5. Recipe Disclaimer</h2>
+      <p>Cooking involves inherent risks (sharp knives, hot surfaces, allergens). While we test our recipes carefully, you are responsible for your own safety and for checking ingredients for allergens. See our full <a href="disclaimer.html">Disclaimer</a> for details.</p>
+
+      <h2>6. Changes to These Terms</h2>
+      <p>We may update these Terms of Privacy occasionally to reflect changes in our practices or for legal reasons. When we do, we'll update the “Last updated” date at the top of this page. Continued use of the Site after changes means you accept the new terms.</p>
+
+      <h2>7. Contact</h2>
+      <p>Questions about these terms or your privacy? <a href="contact.html">Send us a note</a>. We're a small team and we read every message.</p>
+
+      <blockquote>
+        <p>“Privacy is like a good stock — it should be clear, honest, and free of unwanted additives.”</p>
+      </blockquote>
+
+      <p style="margin-top: 2rem; font-style: italic; color: var(--muted);">— The Flint Apron Pantry Team</p>
+    </div>
+
+    <!-- Internal link back to homepage / recipes -->
+    <div class="text-center mt-2" style="padding-top: 2rem;">
+      <a href="index.html" style="display: inline-block; background: var(--accent); color: #fff; padding: 0.8rem 2rem; border-radius: var(--radius); font-weight: 600; font-size: 0.95rem; transition: background 0.15s;" onmouseover="this.style.background='#7e452a'" onmouseout="this.style.background='#9d5c3c'">Browse Recipes</a>
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="font-size: 1.4rem;">
+          <span class="logo-mark" style="background: #d4a373; color: #2c2a26;">F</span>
+          Flint Apron <span>Pantry</span>
+        </div>
+        <p>An independent recipe journal for cooks who read. Slow food, heirloom techniques, and the stories behind the meals we love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Recipes</a></li>
+          <li><a href="#">Techniques</a></li>
+          <li><a href="#">Pantry</a></li>
+          <li><a href="#">Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Write for Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Flint Apron Pantry. All rights reserved.</span>
+      <span>Made with flour, butter, and patience.</span>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT (mobile menu only) ========== -->
+  <script>
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          navLinks.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <!-- ========== SCHEMA MARKUP (TermsPage / WebPage) ========== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Privacy | Flint Apron Pantry",
+    "description": "Terms of Privacy for Flint Apron Pantry: your rights, our responsibilities, and how we handle content and data on our recipe journal.",
+    "url": "https://flintapronpantry.com/terms.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Flint Apron Pantry",
+      "url": "https://flintapronpantry.com"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Terms of Service and Privacy Policy"
+    },
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Flint Apron Pantry",
+      "url": "https://flintapronpantry.com"
+    }
+  }
+  </script>
+</body>
+</html>
